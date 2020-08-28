@@ -1,0 +1,9 @@
+{
+  "name": "personalSite",
+  "version": "1.0.0",
+  "description": "A personal portfolio site!",
+  "main": "index.html",
+  "repository": "https://github.com/Wadboy70/Personal-Site.git",
+  "author": "Seyi Oluwaleimu",
+  "license": "MIT"
+}
