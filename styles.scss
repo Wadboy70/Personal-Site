@@ -1,0 +1,105 @@
+//global variables
+$background-skew: 4deg;
+$my-green: #97FF73;
+$my-green-shadow: #6DD349;
+$my-pink: #ffb6d6;
+//fonts
+@font-face {
+	font-family: Josefin Sans;
+	font-weight: 600;
+	src: url("./fonts/JosefinSans-VariableFont_wght.ttf");
+}
+@font-face {
+	font-family: Annie Use Your Telescope;
+	src: url("./fonts/AnnieUseYourTelescope-Regular.ttf");
+}
+//Shadows
+@mixin shadow($color: #000, $text: true) {
+    @if($text){        
+        text-shadow: .9vw .6vw $color;
+    } @else {
+        box-shadow: 6px 6px $color;
+    }
+}
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	text-align: center;
+}
+body {
+	height: 100vh;
+	width: 100vw;
+	background-color: $my-pink;
+	overflow: hidden;
+}
+//Background
+.background-stripe {
+	background-color: white;
+	transform: skewY(-$background-skew);
+	position: absolute;
+	z-index: -1;
+	margin: 10% 0 auto;
+	height: 80%;
+	width: 100vw;
+
+	svg {
+        transform: skewY($background-skew);
+        position: absolute;
+        width: 35vw;
+    }
+    .triangle{
+        height: auto;
+    }
+}
+//rows
+.rows {
+	min-height: 100vh;
+	width: 100%;
+	display: grid;
+	grid-template-rows: 5% 20% 30% 25% 20%;
+	justify-content: center;
+	align-items: center;
+}
+//title
+.title {
+	font-family: "Josefin Sans";
+	font-size: 14vw;
+    @include shadow(rgba(0,0,0,.5));
+    align-self: flex-end;
+}
+//face
+.face {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100%;
+	.me {
+		height: 80%;
+	}
+}
+//word-box
+.word-box {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    .quote {
+        width: fit-content;
+        font-family: "Annie Use Your Telescope";
+        background-color: $my-green;
+        padding: .6rem;
+        border-radius: .6rem;
+        @include shadow($my-green-shadow, $text:false);
+    }
+    .quote:nth-child(2){
+        border-top-left-radius: 0px;
+        border-top-right-radius: 0px;
+    }
+}
+@media only screen and (min-width: 600px) {
+	//Background
+	.background-stripe {
+		margin: 5% 0 auto;
+		height: 75%;
+	}
+}

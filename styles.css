@@ -1,0 +1,125 @@
+@font-face {
+  font-family: Josefin Sans;
+  font-weight: 600;
+  src: url("./fonts/JosefinSans-VariableFont_wght.ttf");
+}
+
+@font-face {
+  font-family: Annie Use Your Telescope;
+  src: url("./fonts/AnnieUseYourTelescope-Regular.ttf");
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+  background-color: #ffb6d6;
+  overflow: hidden;
+}
+
+.background-stripe {
+  background-color: white;
+  -webkit-transform: skewY(-4deg);
+          transform: skewY(-4deg);
+  position: absolute;
+  z-index: -1;
+  margin: 10% 0 auto;
+  height: 80%;
+  width: 100vw;
+}
+
+.background-stripe svg {
+  -webkit-transform: skewY(4deg);
+          transform: skewY(4deg);
+  position: absolute;
+  width: 35vw;
+}
+
+.background-stripe .triangle {
+  height: auto;
+}
+
+.rows {
+  min-height: 100vh;
+  width: 100%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 5% 20% 30% 25% 20%;
+      grid-template-rows: 5% 20% 30% 25% 20%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.title {
+  font-family: "Josefin Sans";
+  font-size: 14vw;
+  text-shadow: 0.9vw 0.6vw rgba(0, 0, 0, 0.5);
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+}
+
+.face {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100%;
+}
+
+.face .me {
+  height: 80%;
+}
+
+.word-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.word-box .quote {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  font-family: "Annie Use Your Telescope";
+  background-color: #97FF73;
+  padding: .6rem;
+  border-radius: .6rem;
+  -webkit-box-shadow: 6px 6px #6DD349;
+          box-shadow: 6px 6px #6DD349;
+}
+
+.word-box .quote:nth-child(2) {
+  border-top-left-radius: 0px;
+  border-top-right-radius: 0px;
+}
+
+@media only screen and (min-width: 600px) {
+  .background-stripe {
+    margin: 5% 0 auto;
+    height: 75%;
+  }
+}
+/*# sourceMappingURL=styles.css.map */
