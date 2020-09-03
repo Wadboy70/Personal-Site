@@ -22,6 +22,7 @@
   width: 100vw;
   background-color: #ffb6d6;
   overflow: hidden;
+  overflow-y: scroll;
 }
 
 * .background-stripe {
