@@ -183,13 +183,12 @@
 * .links ul li a {
   height: 75%;
   width: auto;
+  -webkit-transition: height .5s;
+  transition: height .5s;
 }
 
 * .links ul li a:hover {
-  -webkit-animation-name: enlargen;
-          animation-name: enlargen;
-  -webkit-animation-duration: 1s;
-          animation-duration: 1s;
+  height: 100%;
 }
 
 * .links ul li a svg {
