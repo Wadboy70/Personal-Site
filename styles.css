@@ -283,6 +283,11 @@
 @media only screen and (min-width: 992px) {
   .title {
     font-size: 7vw;
+    -ms-flex-item-align: end;
+        align-self: flex-end;
+  }
+  .quote {
+    font-size: calc(1.3vh + 1.3vw + .3vmin);
   }
 }
 /*# sourceMappingURL=styles.css.map */

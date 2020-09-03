@@ -248,5 +248,9 @@ body {
     //title
     .title {
         font-size: 7vw;
+        align-self: flex-end;
+    }
+    .quote {
+        font-size: calc(1.3vh + 1.3vw + .3vmin);
     }
 }
