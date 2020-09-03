@@ -17,51 +17,76 @@
   text-align: center;
 }
 
-body {
+* body {
   height: 100vh;
   width: 100vw;
   background-color: #ffb6d6;
   overflow: hidden;
 }
 
-.background-stripe {
+* .background-stripe {
   background-color: white;
   -webkit-transform: skewY(-4deg);
           transform: skewY(-4deg);
   position: absolute;
   z-index: -1;
-  margin: 10% 0 auto;
-  height: 80%;
-  width: 100vw;
+  margin: 16% 0 auto;
+  height: 70%;
+  width: inherit;
 }
 
-.background-stripe svg {
+* .background-stripe svg {
   -webkit-transform: skewY(4deg);
           transform: skewY(4deg);
   position: absolute;
   width: 35vw;
-}
-
-.background-stripe .triangle {
   height: auto;
 }
 
-.rows {
-  min-height: 100vh;
-  width: 100%;
+* .background-stripe .circle {
+  left: 80%;
+  top: 91%;
+  width: 15vw;
+}
+
+* .background-stripe .stripe {
+  left: 30%;
+  top: -9%;
+  width: 29vw;
+}
+
+* .background-stripe .triangle {
+  left: 0%;
+  width: 23vw;
+  top: 89%;
+}
+
+* .background-stripe .rectangle {
+  left: 6%;
+  top: 91%;
+  width: 12vw;
+}
+
+* .background-stripe .semicircle {
+  right: 0%;
+  top: -8%;
+  width: 27vw;
+}
+
+* .rows {
+  height: inherit;
+  width: inherit;
   display: -ms-grid;
   display: grid;
-  -ms-grid-rows: 5% 20% 30% 25% 20%;
-      grid-template-rows: 5% 20% 30% 25% 20%;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-grid-rows: 10% 20% 30% 20% 20%;
+      grid-template-rows: 10% 20% 30% 20% 20%;
+  justify-items: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
 }
 
-.title {
+* .title {
   font-family: "Josefin Sans";
   font-size: 14vw;
   text-shadow: 0.9vw 0.6vw rgba(0, 0, 0, 0.5);
@@ -69,7 +94,7 @@ body {
       align-self: flex-end;
 }
 
-.face {
+* .face {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -82,11 +107,12 @@ body {
   height: 100%;
 }
 
-.face .me {
+* .face .me {
   height: 80%;
 }
 
-.word-box {
+* .word-box {
+  width: inherit;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -94,12 +120,15 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-flow: column;
           flex-flow: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
 }
 
-.word-box .quote {
+* .word-box .quote {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  font-size: 4.2vw;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
@@ -111,15 +140,150 @@ body {
           box-shadow: 6px 6px #6DD349;
 }
 
-.word-box .quote:nth-child(2) {
+* .word-box .quote:nth-child(2) {
   border-top-left-radius: 0px;
   border-top-right-radius: 0px;
 }
 
+* .links {
+  height: 100%;
+  width: 50%;
+  overflow: hidden;
+}
+
+* .links ul {
+  height: inherit;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row;
+          flex-flow: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+* .links ul li {
+  width: 30%;
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: inherit;
+}
+
+* .links ul li a {
+  height: 75%;
+  width: auto;
+}
+
+* .links ul li a:hover {
+  -webkit-animation-name: enlargen;
+          animation-name: enlargen;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+}
+
+* .links ul li a svg {
+  width: 100%;
+  height: 100%;
+}
+
+@media only screen and (min-width: 425px) {
+  .background-stripe {
+    margin: 11% 0 auto;
+    height: 70%;
+  }
+  .background-stripe .stripe {
+    left: 55%;
+    top: -13%;
+    width: 18vw;
+  }
+  .title {
+    width: 70%;
+    font-size: 12vw;
+  }
+}
+
 @media only screen and (min-width: 600px) {
   .background-stripe {
-    margin: 5% 0 auto;
-    height: 75%;
+    margin: 6% 0 auto;
+    height: 70%;
+  }
+  .background-stripe .triangle {
+    left: 0%;
+    width: 15vw;
+    top: 70%;
+  }
+  .background-stripe .rectangle {
+    left: 5%;
+    top: 75%;
+    width: 7vw;
+  }
+  .background-stripe .circle {
+    left: 85%;
+    top: 88%;
+    width: 9vw;
+  }
+  .background-stripe .stripe {
+    left: 65%;
+    top: -6%;
+    width: 12vw;
+  }
+  .background-stripe .semicircle {
+    top: -8%;
+    width: 12vw;
+  }
+  .word-box .quote {
+    font-size: calc(1.5vh + 1.5vw + .4vmin);
+  }
+  .title {
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    font-size: 9vw;
+    text-shadow: 0.3vw 0.3vw rgba(0, 0, 0, 0.5);
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .triangle {
+    left: 0%;
+    width: 15vw;
+    top: 70%;
+  }
+  .rectangle {
+    left: 5%;
+    top: 100%;
+    width: 7vw;
+  }
+  .circle {
+    left: 85%;
+    top: 88%;
+    width: 9vw;
+  }
+  .stripe {
+    left: 75%;
+    top: -9%;
+    width: 12vw;
+  }
+  .semicircle {
+    top: -8%;
+    width: 12vw;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .title {
+    font-size: 7vw;
   }
 }
 /*# sourceMappingURL=styles.css.map */
